@@ -18,3 +18,6 @@ module.exports = {
     });
   }
 }
+
+
+//OPEN WEATHER MAP ONLY WORKS ON HTTP NOT ON HTTPS. SO WE NEED TO FIX THAT IN SERVER.JS
