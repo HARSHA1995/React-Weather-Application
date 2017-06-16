@@ -1,0 +1,6 @@
+
+// we created gitignore file because we dont want node modules should be
+// added to github because it will be created again if we want using a
+// command (git init) and other reason is it is a large file.
+
+node_modules/
