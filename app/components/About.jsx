@@ -24,7 +24,7 @@ var About = (props) => {
    return(
          <div>
            <h1 className = "text-center"> About </h1>
-           <p> This is a Weather Application build on React and Foundation Framework. </p>
+           <p> This is a Weather Application which is build on React and Foundation Framework. </p>
            <p>Here are some of the tools I used:</p>
            <ul>
              <li>
