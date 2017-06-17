@@ -30,7 +30,7 @@ var WeatherMessage = ({location,temp}) => { // ({location,temp}) which is equal 
 // so, var location = this.props.location and var temp= this.props.temp;
   return(
     <div>
-       <h1> It is {temp} in {location} </h1>
+       <h1 className="text-center"> It is {temp} in {location} </h1>
     </div>
   )
 };
