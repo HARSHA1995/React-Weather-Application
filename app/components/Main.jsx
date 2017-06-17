@@ -19,9 +19,12 @@ var main  = (props) => {
   return(
     <div>
         <Nav/>
-        <h1> Main Component </h1>
-        {props.children}
-        {/*  It renders weather component, about component and children component Here */}
+        <div className="row">
+          <div className="columns medium-6 large-4 small-centered">
+            {props.children}
+            {/*  It renders weather component, about component and examples component Here */}
+          </div>
+        </div>
     </div>
   )
 };
