@@ -13,7 +13,7 @@ var {Link} = require('react-router');
 var Examples = (props) => {
   return(
     <div>
-      <h1 className="text-centered">
+      <h1 className="text-centered page-title">
         Example
       </h1>
       <p> Here are few example locations to try up </p>
