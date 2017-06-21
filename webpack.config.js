@@ -1,6 +1,7 @@
 var webpack = require('webpack');
+
 module.exports = {
-  entry : [
+  entry: [
     'script!jquery/dist/jquery.min.js',
     'script!foundation-sites/dist/foundation.min.js',
     './app/app.jsx'
@@ -8,43 +9,43 @@ module.exports = {
   externals: {
     jquery: 'jQuery'
   },
-  plugins:[
+  plugins: [
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery'
     })
   ],
-  output : {
-    path : __dirname,
+  output: {
+    path: __dirname,
     filename: './public/bundle.js'
   },
   resolve: {
     root: __dirname,
     alias: {
-        main : 'app/components/Main.jsx',   //We are getting the component(main) from Main.jsx
-        nav : 'app/components/Nav.jsx',
-        Weather: 'app/components/Weather.jsx',
-        WeatherForm: 'app/components/WeatherForm.jsx',
-        WeatherMessage: 'app/components/WeatherMessage.jsx',
-        About: 'app/components/About.jsx',
-        Examples: 'app/components/Examples.jsx',
-        openWeatherMap: 'app/api/openWeatherMap.jsx',
-        ErrorModal: 'app/components/ErrorModal.jsx',
-        applicationStyles: 'app/styles/app.css'
+      main: 'app/components/Main.jsx',
+      nav: 'app/components/Nav.jsx',
+      Weather: 'app/components/Weather.jsx',
+      WeatherForm: 'app/components/WeatherForm.jsx',
+      WeatherMessage: 'app/components/WeatherMessage.jsx',
+      About: 'app/components/About.jsx',
+      Examples: 'app/components/Examples.jsx',
+      openWeatherMap: 'app/api/openWeatherMap.jsx',
+      ErrorModal: 'app/components/ErrorModal.jsx',
+      applicationStyles: 'app/styles/app.scss'
     },
-    extensions : ['','.js','.jsx']
+    extensions: ['', '.js', '.jsx']
   },
   module: {
     loaders: [
       {
         loader: 'babel-loader',
         query: {
-          presets: ['react','es2015','stage-0']
+          presets: ['react', 'es2015', 'stage-0']
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
       }
     ]
   },
-  devtool:'cheap-module-eval-source-map'
+  devtool: 'cheap-module-eval-source-map'
 };
