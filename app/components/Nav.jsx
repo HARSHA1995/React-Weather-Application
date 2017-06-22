@@ -1,5 +1,6 @@
 var React = require('react');
 var {Link, IndexLink} = require('react-router');
+var Weather = require('Weather');
 
 // instead of using <Link to> tag, we can use <a href="" > tag but in <Link to> tag we can customize in our way by adding different styles.
 
@@ -30,9 +31,15 @@ var {Link, IndexLink} = require('react-router');
 var nav = React.createClass({
   onSearch: function(e){
     e.preventDefault();
-    alert("Not yet Wired up!");
+    var location = this.refs.search.value;
+    var encodedLocation = encodeURIComponent(location); //If we want to use the location in URL, we need to encodeURIComponent to remove any whitespaces.
+    if(location.length){
+      this.refs.search.value = '';
+      window.location.hash = '#/?location=' + encodedLocation;
+    }
   },
   render: function(){
+    // var loc = this.props.location;
   return(
     <div className="top-bar">
       <div className="top-bar-left">
@@ -53,7 +60,7 @@ var nav = React.createClass({
         <form onSubmit={this.onSearch}>
           <ul className="menu">
             <li>
-              <input type="search" placeholder="Search weather by city"/>
+              <input type="search" placeholder="Search weather by city" ref="search"/>
             </li>
             <li>
               <input type="submit" className="button" value="Get Weather"/>
@@ -62,6 +69,7 @@ var nav = React.createClass({
         </form>
       </div>
     </div>
+
   );
 }
 });

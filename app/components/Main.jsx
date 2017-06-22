@@ -18,7 +18,7 @@ var Weather = require('Weather');
 var main  = (props) => {
   return(
     <div>
-        <Nav/>
+        <Nav />
         <div className="row">
           <div className="columns medium-6 large-4 small-centered">
             {props.children}
